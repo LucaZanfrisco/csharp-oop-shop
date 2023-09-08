@@ -92,7 +92,13 @@ namespace csharp_oop_shop
 
         public string GetNomeEsteso()
         {
-            return $"{codice} {nome}";
+            return $"{codice}{nome}";
+        }
+        
+        public string GetCodicePadLeft()
+        {
+            string codicePaddato = this.codice.ToString().PadLeft(8,'0');
+            return codicePaddato;
         }
 
     }
