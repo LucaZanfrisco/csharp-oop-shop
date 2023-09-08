@@ -5,31 +5,33 @@ using csharp_oop_shop;
 {
     Prodotto prodotto1 = new Prodotto("Margherita", "Magnifico bouquet di margherite bianche", 22.0f, 24);
 
-    int codice = prodotto1.GetCodice();
-    Console.WriteLine($"Codice prodotto: {codice}");
+    prodotto1.StampaProdotto();
 
-    string nomeEsteso = prodotto1.GetNomeEsteso();
-    Console.WriteLine($"Nome esteso del prodotto: {nomeEsteso}");
+    //int codice = prodotto1.GetCodice();
+    //Console.WriteLine($"Codice prodotto: {codice}");
 
-    string nome = prodotto1.GetNome();
-    Console.WriteLine($"Nome: {nome}");
+    //string nomeEsteso = prodotto1.GetNomeEsteso();
+    //Console.WriteLine($"Nome esteso del prodotto: {nomeEsteso}");
 
-    string descrizione = prodotto1.GetDescrizione();
-    Console.WriteLine($"Descrizione: {descrizione}");
+    //string nome = prodotto1.GetNome();
+    //Console.WriteLine($"Nome: {nome}");
 
-    float prezzo = prodotto1.GetPrezzo();
-    Console.WriteLine($"Prezzo pre-iva: {prezzo} euro");
+    //string descrizione = prodotto1.GetDescrizione();
+    //Console.WriteLine($"Descrizione: {descrizione}");
 
-    float prezzoIva = prodotto1.GetPrezzoIva();
-    Console.WriteLine($"Prezzo {prezzoIva} euro");
+    //float prezzo = prodotto1.GetPrezzo();
+    //Console.WriteLine($"Prezzo pre-iva: {prezzo} euro");
 
-    string codicePadLeft = prodotto1.GetCodicePadLeft();
-    Console.WriteLine($"Codice con il pad left: {codicePadLeft}");
+    //float prezzoIva = prodotto1.GetPrezzoIva();
+    //Console.WriteLine($"Prezzo {prezzoIva} euro");
+
+    //string codicePadLeft = prodotto1.GetCodicePadLeft();
+    //Console.WriteLine($"Codice con il pad left: {codicePadLeft}");
 }
 
 {
-    Console.WriteLine("Inserire nella lista 5 prodotti");
-    Console.WriteLine("\n---------------------------\n");
+    Console.WriteLine("\nInserire nella lista 5 prodotti");
+    Console.WriteLine("---------------------------");
 
     Prodotto[] listaProdotti = new Prodotto[5];
 
@@ -53,4 +55,12 @@ using csharp_oop_shop;
 
         Console.WriteLine(i < listaProdotti.Length - 1 ? "--------------------------" : "");
     }
+
+
+    for (int i = 0;i < listaProdotti.Length;i++)
+    {
+        listaProdotti[i].StampaProdotto();
+    }
+
+
 }

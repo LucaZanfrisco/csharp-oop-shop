@@ -26,6 +26,7 @@ namespace csharp_oop_shop
             SetIva(iva);
         }
 
+
         // SETTERS
         private void SetCodice()
         {
@@ -92,13 +93,23 @@ namespace csharp_oop_shop
 
         public string GetNomeEsteso()
         {
-            return $"{codice}{nome}";
+            return $"{codice} - {nome}";
         }
         
         public string GetCodicePadLeft()
         {
             string codicePaddato = this.codice.ToString().PadLeft(8,'0');
             return codicePaddato;
+        }
+
+        public void StampaProdotto()
+        {
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine($"Nome: {this.nome}\n");
+            Console.WriteLine($"Descrizone: {this.descrizione}\n");
+            Console.WriteLine($"Prezzo senza iva: {this.prezzo}\n");
+            Console.WriteLine($"Prezzo con iva: {GetPrezzoIva()}");
+            Console.WriteLine("-----------------------------------");
         }
 
     }
